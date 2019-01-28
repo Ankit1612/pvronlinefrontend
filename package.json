@@ -6,10 +6,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
-    "deploy": "gh-pages -d build",
     "express": "^4.16.4",
     "history": "^4.7.2",
-    "predeploy": "npm run build",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
