@@ -56,7 +56,11 @@ class SignUp extends React.Component {
       method: "post",
       url: signUpUrl,
       data: payload,
-      headers: { "Content-Type": "application/json" }
+      crossDomain: true,
+      headers: {
+        "accept": "application/json",
+        "Access-Control-Allow-Origin": "*", 
+        "Content-Type": "application/json" }
     }).then(
       function(response) {
         console.log(response.state);
