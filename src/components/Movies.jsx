@@ -28,9 +28,7 @@ export class Movies extends React.Component {
         { movieName: "Movie2", code: 302 },
         { movieName: "Movie3", code: 303 },
         { movieName: "Movie4", code: 304 },
-        { movieName: "Movie5", code: 305 },
-        { movieName: "Movie6", code: 306 },
-        { movieName: "Movie7", code: 307 }
+        { movieName: "Movie5", code: 305 }
       ],
       currentCode: null,
       requestCount: true
@@ -42,7 +40,6 @@ export class Movies extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.requestData = this.requestData.bind(this);
     this.setNull = this.setNull.bind(this);
-    this.movieListUrl = "http://localhost:4000/activity/";
   }
 
   toggle(event) {
