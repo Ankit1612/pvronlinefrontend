@@ -89,7 +89,7 @@ export class Movies extends React.Component {
       message: this.state.message,
       subject: this.state.subject
     };
-    axios.post(sendMailUrl, payload).then(
+    axios.get(sendMailUrl, payload).then(
       function(response) {
         console.log(response.data);
         if (response.status === 200) {

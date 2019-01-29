@@ -66,7 +66,7 @@ export class AddUsers extends React.Component {
       cityCode: this.state.cityCode,
       mailid: this.state.mailid
     };
-    axios.post(loginUrl, payload).then(function(response) {
+    axios.option(loginUrl, payload).then(function(response) {
       console.log(response);
       if (response.status === 200) {
         console.log("Login successful", response.data.fullname);
