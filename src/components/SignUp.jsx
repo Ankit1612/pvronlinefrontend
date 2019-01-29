@@ -51,7 +51,15 @@ class SignUp extends React.Component {
       fullname: this.state.fullname,
       password: this.state.password
     };
-    axios.post(signUpUrl, payload).then(
+    console.log(signUpUrl);
+    axios({
+      method: "POST",
+      url: signUpUrl,
+      data: payload,
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(
       function(response) {
         console.log(response);
         if (response.status === 200) {
@@ -82,7 +90,7 @@ class SignUp extends React.Component {
           className={this.props.className}
         >
           <ModalHeader toggle={this.toggle} close={closeBtn}>
-            Login
+            SignUp
           </ModalHeader>
           <ModalBody>
             <Form row>

@@ -13,7 +13,6 @@ import {
   Label
 } from "reactstrap";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
 
 export class Users extends React.Component {
   constructor(props) {
@@ -94,7 +93,7 @@ export class Users extends React.Component {
     axios.post(sendMailUrl, payload).then(
       function(response) {
         console.log(response.data);
-        if (response.status == 200) {
+        if (response.status === 200) {
           console.log("message sent");
           this.toggle();
         } else if (response.status !== 200) {
