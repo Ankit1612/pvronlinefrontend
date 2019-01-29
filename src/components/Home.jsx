@@ -1,7 +1,6 @@
 import React from "react";
 import { Table } from "reactstrap";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {

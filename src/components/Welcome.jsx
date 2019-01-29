@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import logo from "../logo.svg";
 import "../App.css";
-import { AuthButton } from "./Auth";
 import { Login } from "./Login";
 import { SignUp } from "./SignUp";
-import { Redirect } from "react-router-dom";
 
 export class Welcome extends Component {
   constructor(props) {

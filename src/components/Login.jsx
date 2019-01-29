@@ -57,7 +57,12 @@ class Login extends React.Component {
       password: this.state.password
     };
 
-    axios.post(loginUrl, payload).then(
+    axios({
+      method: "post",
+      url: loginUrl,
+      data: payload,
+      headers: { "Content-Type": "application/json" }
+    }).then(
       function(response) {
         console.log(response);
         if (response.status === 200) {
@@ -96,8 +101,8 @@ class Login extends React.Component {
             Login
           </ModalHeader>
           <ModalBody>
-            <Form row>
-              <FormGroup>
+            <Form>
+              <FormGroup row>
                 <Label for="loginUsername" hidden>
                   Username
                 </Label>
@@ -109,7 +114,7 @@ class Login extends React.Component {
                   onChange={this.handleChange}
                 />
               </FormGroup>{" "}
-              <FormGroup>
+              <FormGroup row>
                 <Label for="loginPassword" hidden>
                   Password
                 </Label>

@@ -53,15 +53,13 @@ class SignUp extends React.Component {
     };
     console.log(signUpUrl);
     axios({
-      method: "POST",
+      method: "post",
       url: signUpUrl,
       data: payload,
-      headers: {
-        "Content-Type": "application/json"
-      }
+      headers: { "Content-Type": "application/json" }
     }).then(
       function(response) {
-        console.log(response);
+        console.log(response.state);
         if (response.status === 200) {
           console.log("SignUp successful");
           this.toggle();

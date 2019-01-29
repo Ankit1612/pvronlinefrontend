@@ -92,7 +92,7 @@ export class Movies extends React.Component {
     axios.post(sendMailUrl, payload).then(
       function(response) {
         console.log(response.data);
-        if (response.status == 200) {
+        if (response.status === 200) {
           console.log("message sent");
           this.toggle();
         } else if (response.status !== 200) {
@@ -210,12 +210,5 @@ export class Movies extends React.Component {
         </div>
       </div>
     );
-    //   } else {
-    //     console.log("failed to login");
-    //     return <Redirect to="/home" />;
-    //   }
-    // });
-
-    return <Redirect to="/home" />;
   }
 }
