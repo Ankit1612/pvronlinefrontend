@@ -58,7 +58,7 @@ export class Movies extends React.Component {
       var mailIdsUrl = `https://pvronline.herokuapp.com/activity/movie?movieCode=${
         this.state.currentCode
       }`;
-      axios.post(mailIdsUrl).then(
+      axios.get(mailIdsUrl).then(
         function(response) {
           if (response.status === 200) {
             console.log(response.data);

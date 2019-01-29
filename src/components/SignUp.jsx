@@ -59,8 +59,8 @@ class SignUp extends React.Component {
       crossDomain: true,
       headers: {
         "accept": "application/json",
-        "Access-Control-Allow-Origin": "*", 
-        "Content-Type": "application/json" }
+        "access-control-allow-origin": "*", 
+        "content-type": "application/json" }
     }).then(
       function(response) {
         console.log(response.state);
